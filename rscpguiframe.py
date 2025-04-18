@@ -773,7 +773,7 @@ class RSCPGuiFrame(MainFrame, RSCPGuiMain):
             self.gSoftwaremodules.DeleteRows(0, self.gSoftwaremodules.GetNumberRows())
             self.gSoftwaremodules.AppendRows(len(d['INFO_MODULES_SW_VERSIONS']))
             row = 0
-            regex = r"([\d\.]*) \[(.*)\] \(SVN: *([\da-zA-Z]*)\)"
+            regex = r"([\d\.]*) \[(.*)\] \(SVN: *([\da-zA-Z0-9_\-]*)\)"
 
             for moduleversion in d['INFO_MODULES_SW_VERSIONS']:
                 module = moduleversion['INFO_MODULE'].data
